@@ -1,6 +1,35 @@
 {
-  "name": "Getting Started Example",
-  "version": "1.0",
-  "description": "Build an Extension!",
-  "manifest_version": 2
+  "name": "Global tabs",
+  "version": "0.1",
+  "description": "Adds global keybinds to switch tabs",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "permissions": [],
+  "commands": {
+    "next-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+2"
+      },
+      "description": "Open next tab",
+      "global": true
+    },
+    "prev-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1"
+      },
+      "description": "Open previous tab",
+      "global": true
+    }
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/export16px.png",
+      "32": "icons/export32px.png",
+      "48": "icons/export48px.png",
+      "128": "icons/export128px.png"
+    }
+  }
 }
