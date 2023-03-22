@@ -7,7 +7,10 @@
     "scripts": ["background.js"],
     "persistent": true
   },
-  "permissions": [],
+  "permissions": [
+    "tabs",
+    "https://www.youtube.com/"
+  ],
   "commands": {
     "next-tab": {
       "suggested_key": {
@@ -21,6 +24,20 @@
         "default": "Ctrl+Shift+1"
       },
       "description": "Open previous tab",
+      "global": true
+    },
+    "play-pause": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+3"
+      },
+      "description": "Toggle youtube play pause",
+      "global": true
+    },
+    "mute-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+4"
+      },
+      "description": "Toggle tab mute",
       "global": true
     }
   },
